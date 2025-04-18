@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+</head>
+<body>
+	<table>
+		<tr>
+			<th>이름</th>
+			<th>나이</th>
+			<th>주소</th>
+		</tr>
+		<!-- 	
+		<tr tr:each="dto : ${list}">
+			<td>[[${dto.name}]]</td>
+			<td>[[${dto.age}]]</td>
+			<td>[[${dto.adress}]]</td>
+			반복문
+		</tr>    
+		 -->
+		<tr>
+			<th>둘리</th>
+			<th>20</th>
+			<th>인천 구월동</th>
+		</tr>
+		<tr>
+			<th>또치</th>
+			<th>30</th>
+			<th>서울 신림동</th>
+		</tr>
+		<tr>
+			<th>도우너</th>
+			<th>40</th>
+			<th>부산 문래동</th>
+		</tr>
+	</table>
+
+	<th:block th:each="dto : ${list}">
+		<tr>
+			<td>[[${dto.name}]]</td>
+			<td>[[${dto.age}]]</td>
+			<td>[[${dto.address}]]</td>
+		</tr>
+	</th:block>
+</body>
+</html>

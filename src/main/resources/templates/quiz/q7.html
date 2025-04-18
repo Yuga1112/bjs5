@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+.red {
+color: red;
+}
+</style>
+</head>
+<body>
+
+<tr tr:each="dto : ${list}">
+			<td>[[${dto.name}]]</td>
+			<td>[[${dto.age}]]</td>
+			<td>[[${dto.adress}]]</td>
+			<!--  반복문 -->
+		</tr>  
+		
+ <tr th:each="dto : ${list}">
+    <td>[[${dto.name}]]</td>
+ 
+    <td th:class=" ${dto.age>=30} ? red : '' ">[[${dto.age}]]</td>
+    <td>[[${dto.address}]]</td>
+  </tr>
+</body>
+</html>
