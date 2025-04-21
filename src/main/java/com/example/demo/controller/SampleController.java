@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,6 +15,7 @@ import com.example.demo.dto.SampleDTO;
 
 @Controller
 @RequestMapping("/sample")
+//sample은 중간경로 / 클래스 안에 있는 모든 함수에 적용
 public class SampleController {
 
 	
@@ -55,4 +57,29 @@ public class SampleController {
 		// 화면에 문자열 데이터를
 		model.addAttribute("msg", "success");
 	}
+	
+	//전체 url: /sample/ex11
+	//반환타입 : void = > url 경로가 파일의 경로가 됨
+	//파일의 경로 : sample 폴더아래 ex11.html
+	//매개변수 : 파라미터 / model
+	//model : 컨트롤러에서 화면을 데이터를 전달하는 객체
+	@GetMapping("/ex11")
+	public void ex11(Model model) {
+	
+		//화면에 현재시간
+		model.addAttribute("date", LocalDateTime.now());
+		
+		//
+		
+	}
+	
 }
+
+/*
+ * v : view - 
+ * 순수한 html -> 정적인 페이지
+ * 템플릿엔진 (jsp Thymeleaf) -> 동적인 페이지
+ * 
+ * jsp - wedapp
+ * Thymeleaf - tempplates
+ * */

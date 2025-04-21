@@ -33,6 +33,19 @@ public class QuizController {
 		        dtoList.add(new PersonDTO("장유라",33,"부산 문래동"));
 		        model.addAttribute("list", dtoList);
 		    }
+	
+
+    @GetMapping({"/q8", "/q9"})
+    public void ex8(Model model){
+        List<PersonDTO> dtoList = new ArrayList<>();
+        dtoList.add(new PersonDTO("Aaa",25,"인천 구월동"));
+        dtoList.add(new PersonDTO("Bbb",17,"서울 신림동"));
+        dtoList.add(new PersonDTO("Ccc",31,"부산 문래동"));
+        dtoList.add(new PersonDTO("Ddd",8,"인천 연수동"));
+        dtoList.add(new PersonDTO("Eee",33,"부산 문래동"));
+        model.addAttribute("list", dtoList);
+    }
+    
 	}
 
 
